@@ -114,9 +114,9 @@
 	<h1>FANTASY GBBO</h1>
 	{#each bakers as baker}
 		{#if baker.active === true}
-			<div>
-				{baker.name}<br/>
-				{baker.points}
+			<div class="scoreboard">
+				<span class="scorename">{baker.name}</span>
+				<span class="scorepts">{baker.points}</span>
 			</div>
 		{/if}
 	{/each}
@@ -145,6 +145,27 @@
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
+	}
+
+	.scoreboard {
+		background-color: #d0d0d0;
+		text-align:center;
+		display: inline-block;
+		width: 150px;
+		margin:0 15px 0 0;
+		padding:15px;
+	}
+
+	.scorename {
+		font-weight:700;
+		font-size:1.2rem;
+		display:block;
+	}
+
+	.scorepts {
+		font-weight: 900;
+		font-size: 1.8rem;
+		display:block;
 	}
 
 	@media (min-width: 640px) {
