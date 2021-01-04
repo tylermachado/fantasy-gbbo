@@ -12,22 +12,62 @@
 
 	$: bakers = [
 		{
-			name: "John",
+			name: "Linda",
 			points: 0,
 			active: true
 		},
 		{
-			name: "Ringo",
+			name: "Mak",
 			points: 0,
 			active: true
 		},
 		{
-			name: "George",
+			name: "Laura",
 			points: 0,
 			active: true
 		},
 		{
-			name: "Paul",
+			name: "Mark",
+			points: 0,
+			active: true
+		},
+		{
+			name: "Loreia",
+			points: 0,
+			active: false
+		},
+		{
+			name: "Lottie",
+			points: 0,
+			active: true
+		},
+		{
+			name: "Dave",
+			points: 0,
+			active: true
+		},
+		{
+			name: "Marc",
+			points: 0,
+			active: true
+		},
+		{
+			name: "Peter",
+			points: 0,
+			active: true
+		},
+		{
+			name: "Sura",
+			points: 0,
+			active: true
+		},
+		{
+			name: "Rowan",
+			points: 0,
+			active: true
+		},
+		{
+			name: "Hermine",
 			points: 0,
 			active: true
 		}
@@ -51,6 +91,10 @@
 			points: 1000
 		},
 		{
+			action: "My kids love this",
+			points: 100
+		},
+		{
 			action: "Baker earns 1st place in technical",
 			points: 300
 		},
@@ -63,9 +107,30 @@
 			points: 100
 		},
 		{
+			action: "Family recipe",
+			points: 200
+		},
+		{
 			action: "Happy tears",
 			points: 300
 		},
+		{
+			action: "Blueprints shown",
+			points: 100
+		},
+		{
+			action: "Host escapes with bake",
+			points: 300
+		},
+		{
+			action: "Technical bottom-three",
+			points: -200
+		},
+		{
+			action: "Technical top-three",
+			points: 200
+		},
+
 		{
 			action: "Into the bin",
 			points: -300
@@ -95,6 +160,10 @@
 			points: -300
 		},
 		{
+			action: "Dropped yer bake",
+			points: -500
+		},
+		{
 			action: "Baker eliminated",
 			points: -1000
 		}
@@ -122,12 +191,14 @@
 	{/each}
 
 	{#each actions as action}
-		<h3>{action.action} ({action.points})</h3>
-		{#each bakers as baker}
-			{#if baker.active === true}
-				<button on:click={updateScore(action, baker)}>{baker.name}</button>
-			{/if}
-		{/each}
+		<div class="action">
+			<h3>{action.action} ({action.points})</h3>
+			{#each bakers as baker}
+				{#if baker.active === true}
+					<button on:click={updateScore(action, baker)}>{baker.name}</button>
+				{/if}
+			{/each}
+		</div>
 	{/each}
 
 </main>
@@ -147,12 +218,24 @@
 		font-weight: 100;
 	}
 
+	.action {
+		width:100%;
+		display:grid;
+		grid-template-columns: 3fr repeat(11, 1fr);
+		padding:1rem 0;
+	}
+
+	.action:nth-child(even) {
+		background-color: #eee;
+	}
+
 	.scoreboard {
-		background-color: #d0d0d0;
+		background-color: #000;
+		color: #ff926f;
 		text-align:center;
 		display: inline-block;
 		width: 150px;
-		margin:0 15px 0 0;
+		margin:0 15px 3rem 0;
 		padding:15px;
 	}
 
