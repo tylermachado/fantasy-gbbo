@@ -19,7 +19,7 @@
 		{
 			name: "Mak",
 			points: 0,
-			active: true
+			active: false
 		},
 		{
 			name: "Laura",
@@ -59,12 +59,12 @@
 		{
 			name: "Sura",
 			points: 0,
-			active: true
+			active: false
 		},
 		{
 			name: "Rowan",
 			points: 0,
-			active: true
+			active: false
 		},
 		{
 			name: "Hermine",
@@ -221,7 +221,7 @@
 	.action {
 		width:100%;
 		display:grid;
-		grid-template-columns: 3fr repeat(11, 1fr);
+		grid-template-columns: 3fr repeat(8, 1fr);
 		padding:1rem 0;
 	}
 
@@ -234,7 +234,7 @@
 		color: #ff926f;
 		text-align:center;
 		display: inline-block;
-		width: 150px;
+		width: 110px;
 		margin:0 15px 3rem 0;
 		padding:15px;
 	}
