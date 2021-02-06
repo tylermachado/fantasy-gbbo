@@ -14,7 +14,7 @@
 		{
 			name: "Linda",
 			points: 0,
-			active: true
+			active: false
 		},
 		{
 			name: "Mak",
@@ -29,7 +29,7 @@
 		{
 			name: "Mark",
 			points: 0,
-			active: true
+			active: false
 		},
 		{
 			name: "Loreia",
@@ -39,7 +39,7 @@
 		{
 			name: "Lottie",
 			points: 0,
-			active: true
+			active: false
 		},
 		{
 			name: "Dave",
@@ -49,7 +49,7 @@
 		{
 			name: "Marc",
 			points: 0,
-			active: true
+			active: false
 		},
 		{
 			name: "Peter",
@@ -69,7 +69,7 @@
 		{
 			name: "Hermine",
 			points: 0,
-			active: true
+			active: false
 		}
 	];
 
@@ -221,7 +221,7 @@
 	.action {
 		width:100%;
 		display:grid;
-		grid-template-columns: 3fr repeat(8, 1fr);
+		grid-template-columns: 3fr repeat(5, 1fr);
 		padding:1rem 0;
 	}
 
